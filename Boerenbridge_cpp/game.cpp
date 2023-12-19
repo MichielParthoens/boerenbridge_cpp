@@ -1,14 +1,42 @@
 // Game.cpp
-
+#include "humanplayer.h"
+#include "computerplayer.h"
 #include "game.h"
 #include <algorithm>
 #include <iostream>
 
-Game::Game(int numPlayers) {
+void Game::createPlayers() { // object composition, player en card worden gebruikt voor de logica van het spel
+    int amountOfHumanPlayers = 0;
+    int amountOfComputerPlayers = 0;
+
+
+    std::cout << " the max amount of humanplayers is 4";
+    std::cout << " the max amount of AI players is 4";
+    std::cout << " the minimum amount of players required to play the game is 3 players";
+    while(amountOfHumanPlayers<=0 || amountOfHumanPlayers>=5){
+    std::cout << "Enter the amount of humanplayers you want to play with: ";
+    std::cin >> amountOfHumanPlayers;  // Ask for integer input
+    // Check if the input was successful
+    if (std::cin.fail()) {
+        std::cerr << "Error: Invalid input. Please enter an number." << std::endl;
+        // Handle the error as needed
+    }}
+    while(amountOfHumanPlayers+amountOfComputerPlayers<=2 || amountOfComputerPlayers >=5 || amountOfComputerPlayers <0){
+    std::cout << "Enter the amount of AI players you want to play with: ";
+    std::cin >> amountOfComputerPlayers;
+    // Check if the input was successful
+    if (std::cin.fail()) {
+        std::cerr << "Error: Invalid input. Please enter an number." << std::endl;
+        // Handle the error as needed
+
+    }}
     // Aannemen dat numPlayers geldig is (bijvoorbeeld tussen 2 en 4)
     // Maak spelers en voeg ze toe aan de vector
-    for (int i = 0; i < numPlayers; ++i) {
-        players.push_back(new Player());
+    for (int i = 0; i < amountOfHumanPlayers; ++i) {
+        players.push_back(new HumanPlayer("Michiel"));
+    }
+    for (int i = 0; i < amountOfComputerPlayers; ++i) {
+        players.push_back(new ComputerPlayer("Michiel"));
     }
 }
 
@@ -20,9 +48,7 @@ void Game::createDeck() {
     }
 }
 
-void Game::shuffleDeck() {
-    std::random_shuffle(deck.begin(), deck.end());
-}
+
 
 void Game::dealCards() {
     int numPlayers = players.size();
@@ -37,14 +63,13 @@ void Game::dealCards() {
 }
 
 void Game::playGame() {
-    // Implementeer de hoofdlogica van het spel hier
-    // Bijvoorbeeld: beurtvolgorde, speleracties, enzovoort.
+
     std::cout << "Implementeer de logica van het spel hier." << std::endl;
 }
 
 void Game::startGame() {
+    createPlayers();
     createDeck();
-    shuffleDeck();
     dealCards();
     playGame();
 }

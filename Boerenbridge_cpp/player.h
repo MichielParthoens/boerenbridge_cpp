@@ -6,15 +6,18 @@
 #include "Card.h"
 #include <vector>
 
-class Player {
+class Player { //abstracte base class
 public:
-    virtual void makeMove() = 0;
+    Player(std::string name) : Name(name){}
+    virtual void makeMove() = 0; //virtual function + polymorfisme
     void addCardToHand(const Card& card);
+
 
     // ... (andere basisfunctionaliteiten voor een speler)
 
 protected:
-    std::vector<Card> hand;
+    const std::string Name;
+    std::vector<Card> hand; //encapsulation
 };
 
 #endif // PLAYER_H

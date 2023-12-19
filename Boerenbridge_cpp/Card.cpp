@@ -11,7 +11,7 @@ Card::Suit Card::getSuit() const {
 Card::Rank Card::getRank() const {
     return rank;
 }
-
+// getters
 std::string Card::toString() const {
     std::string suitStr;
     switch (suit) {

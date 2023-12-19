@@ -9,15 +9,20 @@
 
 class Game {
 public:
-    Game(int numPlayers);
+
+    void runGame();
     void startGame();
+
+protected:
+
 
 private:
     std::vector<Player*> players;
     std::vector<Card> deck;
 
+
+    void createPlayers();
     void createDeck();
-    void shuffleDeck();
     void dealCards();
     void playGame();
 };

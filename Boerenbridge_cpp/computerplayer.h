@@ -7,8 +7,11 @@
 
 class ComputerPlayer : public Player {
 public:
+    ComputerPlayer(std::string name) : Player(name){}
     void makeMove() override;
     // ... (andere functionaliteiten voor een computergestuurde speler)
+protected:
+
 };
 
 #endif // COMPUTER_PLAYER_H
