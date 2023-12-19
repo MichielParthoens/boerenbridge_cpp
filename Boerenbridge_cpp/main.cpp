@@ -8,10 +8,8 @@
 #include "game.h"
 
 int main() {
-    //create game called "myGame"
-    Game myGame;
-    // Call the startGame function for setup
-    myGame.startGame();
-
+ // create a game and start it
+    Game game;
+    game.startGame();
     return 0;
 }

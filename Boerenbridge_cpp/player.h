@@ -1,4 +1,3 @@
-// Player.h
 
 #ifndef PLAYER_H
 #define PLAYER_H
@@ -6,18 +5,27 @@
 #include "Card.h"
 #include <vector>
 
-class Player { //abstracte base class
+class Player {
 public:
-    Player(std::string name) : Name(name){}
-    virtual void makeMove() = 0; //virtual function + polymorfisme
+    Player(std::string name); // Constructor
+    virtual void makeMove() = 0; // Pure virtual function
     void addCardToHand(const Card& card);
-
-
-    // ... (andere basisfunctionaliteiten voor een speler)
+    const std::string& getName() const;
+    void setName(std::string newName);
+    int getRoundsWon() const;
+    void setRoundsToWin(int rounds);
+    void incrementRoundsWon();
+    const Card* getPlayedCard();
+    void setPlayedCard(const Card* card);
 
 protected:
-    const std::string Name;
-    std::vector<Card> hand; //encapsulation
+    std::vector<Card> hand;
+
+private:
+    std::string name;
+    int roundsToWin;
+    int roundsWon;
+    const Card* playedCard = nullptr; // member for the played card
 };
 
 #endif // PLAYER_H
