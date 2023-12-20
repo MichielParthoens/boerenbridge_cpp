@@ -15,7 +15,7 @@ void Game::createPlayers() { // object composition, player en card worden gebrui
 
 
     std::cout << " the max amount of humanplayers is 4, minimum is 1" << std::endl;
-    std::cout << " the max amount of AI players is 4n minimum is 1" << std::endl;
+    std::cout << " the max amount of AI players is 4, minimum is 1" << std::endl;
     std::cout << " the minimum amount of players required to play the game is 3 players" << std::endl;
     while(amountOfHumanPlayers<=0 || amountOfHumanPlayers>=5){
     std::cout << "Enter the amount of humanplayers you want to play with: ";
@@ -94,6 +94,7 @@ void Game::startGame() {
         // Start the rounds
         for (int round = 1; round <= totalRounds; ++round) {
             std::cout << "----- Round " << round << " -----" << std::endl;
+            std::cout <<" "<<std::endl;
 
             // Each player makes a move (plays a card)
             for (Player* player : players) {
@@ -109,7 +110,7 @@ void Game::startGame() {
         }
 
         // Display the final scoreboard
-        std::cout << "----- Final Scoreboard -----" << std::endl;
+        std::cout << "======================== FINAL SCOREBOARD ========================" << std::endl;
         displayScoreboard();
     }
 
@@ -129,11 +130,15 @@ void Game::startGame() {
     }
 
 void Game::displayScoreboard() {
+        std::cout <<" "<<std::endl;
         std::cout << "--------------------------------------------------Scoreboard:------------------------------------------------------------" << std::endl;
+        std::cout <<" "<<std::endl;
         for (Player* player : players) {
             std::cout << player->getName() << ": " << player->getRoundsWon() << " won rounds" << std::endl;
         }
-        std::cout << "-------------------" << std::endl;
+        std::cout <<" "<<std::endl;
+        std::cout << "-------------------------------------------------------------------------------------------------------------------------" << std::endl;
+        std::cout <<" "<<std::endl;
 }
 
 
