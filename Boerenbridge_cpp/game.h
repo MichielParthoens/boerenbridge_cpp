@@ -20,14 +20,13 @@ private:
     std::vector<Player*> players; // usefull container class to store pointers to players
     std::vector<Card> deck;
     int currentPlayerIndex;
-    int totalRounds;
+    int totalRounds = 8;
     Player& determineRoundWinner();
 
     void displayScoreboard();
     void createPlayers();
     void createDeck();
     void dealCards();
-    int askHits();
 };
 
 

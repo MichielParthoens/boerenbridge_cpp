@@ -63,7 +63,7 @@ void Game::createDeck() { //deck opstellen
 
 void Game::dealCards() {
     int numPlayers = players.size();
-    int cardsPerPlayer = deck.size() / numPlayers; //still needs to be fixed to rounds
+    int cardsPerPlayer = 8;
 
     for (int i = 0; i < numPlayers; ++i) {
         for (int j = 0; j < cardsPerPlayer; ++j) {

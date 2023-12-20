@@ -7,9 +7,8 @@ void ComputerPlayer::makeMove() {
         std::cout << getName() << " has no cards to play." << std::endl;
         return;
     }
-    int randomIndex = rand() % hand.size();                                         // Select a random index from the player's hand
-    const Card* selectedCard = &hand[randomIndex];                                  // Play the random card
+    const Card* selectedCard = &hand[1];                                  // Play the random card
     std::cout << getName() << " plays: " << selectedCard->toString() << std::endl;
     Player::setPlayedCard(selectedCard);
-    hand.erase(hand.begin() + randomIndex);                                         // Remove the played card from the player's hand
+    hand.erase(hand.begin() + 1);                                         // Remove the played card from the player's hand
 }
