@@ -9,7 +9,6 @@ class HumanPlayer : public Player {
 public:
     HumanPlayer(std::string name) : Player(name){} // constructor forwarding, forwarding to the constructor from the base class player
     void makeMove() override;
-    // ... (andere functionaliteiten voor een menselijke speler)
 
 protected:
 

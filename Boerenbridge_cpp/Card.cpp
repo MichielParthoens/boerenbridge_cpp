@@ -6,13 +6,13 @@ Card::Card(Suit suit, Rank rank) : suit(suit), rank(rank) {}
 
 Card::Suit Card::getSuit() const {
     return suit;
-}
+}                                   //getter functions
 
 Card::Rank Card::getRank() const {
     return rank;
 }
-// getters
-std::string Card::toString() const {
+
+std::string Card::toString() const {//cases voor de string te returnen
     std::string suitStr;
     switch (suit) {
     case HEARTS:

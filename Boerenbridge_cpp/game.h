@@ -27,7 +27,6 @@ private:
     void createPlayers();
     void createDeck();
     void dealCards();
-    void playGame();
     int askHits();
 };
 

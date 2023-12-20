@@ -26,7 +26,7 @@ public:
     bool operator != ( const Card & other ) const		{ return( ( rank != other.rank ) || ( suit != other.suit ) ); }//not for pointers, normally a card should be unique !
     bool operator != ( const Card * const other ) const	{ return( ( rank != other->rank ) || ( suit != other->suit ) ); }
     // Getter-functies voor de kaartinformatie
-    Suit getSuit() const;
+    Suit getSuit() const; //getter functions
     Rank getRank() const;
 
     // Functie om de kaart te tonen (bijv. "HEARTS ACE")

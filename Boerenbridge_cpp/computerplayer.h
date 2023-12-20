@@ -8,8 +8,8 @@
 class ComputerPlayer : public Player {
 public:
     ComputerPlayer(std::string name) : Player(name){} //constructor forwarding
-    void makeMove() override;
-    // ... (andere functionaliteiten voor een computergestuurde speler)
+    void makeMove() override; //override voor polymorphistische functie makemove
+
 protected:
 
 };
