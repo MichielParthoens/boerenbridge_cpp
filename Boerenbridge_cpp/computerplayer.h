@@ -7,7 +7,7 @@
 
 class ComputerPlayer : public Player {
 public:
-    ComputerPlayer(std::string name) : Player(name){}
+    ComputerPlayer(std::string name) : Player(name){} //constructor forwarding
     void makeMove() override;
     // ... (andere functionaliteiten voor een computergestuurde speler)
 protected:

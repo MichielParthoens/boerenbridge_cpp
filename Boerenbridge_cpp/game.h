@@ -17,7 +17,7 @@ protected:
 
 
 private:
-    std::vector<Player*> players;
+    std::vector<Player*> players; // usefull container class to store pointers to players
     std::vector<Card> deck;
     int currentPlayerIndex;
     int totalRounds;

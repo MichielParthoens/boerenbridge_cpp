@@ -25,7 +25,7 @@ void Game::createPlayers() { // object composition, player en card worden gebrui
         std::cerr << "Error: Invalid input. Please enter an number." << std::endl;
         // Handle the error as needed
     }}
-    while(amountOfHumanPlayers+amountOfComputerPlayers<=2 || amountOfComputerPlayers >=5 || amountOfComputerPlayers <=0){
+    while(amountOfHumanPlayers+amountOfComputerPlayers<=2 || amountOfComputerPlayers >=5 || amountOfComputerPlayers <=0){ // <= 0 terugzetten
     std::cout << "Enter the amount of AI players you want to play with: ";
     std::cin >> amountOfComputerPlayers;
     // Check if the input was successful
@@ -41,6 +41,9 @@ void Game::createPlayers() { // object composition, player en card worden gebrui
         std::cout << i;
     std::cout << ": " << std::endl;
         std::string name;
+    //if (i==0){name="Michiel";}
+  //  else if (i==1){name="Arnout";}
+  //  else if (i==2){name="Charlotte";}
     std::cin >> name;
         players.push_back(new HumanPlayer(name));
     }
@@ -92,7 +95,7 @@ void Game::startGame() {
 
         // Ask players how many rounds they want to win
         for (Player* player : players) {
-            int roundsToWin;
+            int roundsToWin = 0;
         std::cout << player->getName() << ", how many rounds do you want to win? ";
             std::cin >> roundsToWin;
         player->setRoundsToWin(roundsToWin);
@@ -121,24 +124,41 @@ void Game::startGame() {
         displayScoreboard();
     }
 
-Player& Game::determineRoundWinner() {
+/*Player& Game::determineRoundWinner() {
         // For simplicity, assume the current player always wins the round
         int roundWinnerIndex = 0;
             Player& roundWinner = *players[0];
-        for (size_t i = 0; i < players.size(); ++i) {
+        for (int i = 0; i < players.size(); ++i) {
             // Compare the cards played by each player in the current round
             std::cout <<players[i]->getName() << " heeft deze kaart in functie determine " <<players[i]->getPlayedCard()->toString() <<std::endl;
-            if (players[i]->getPlayedCard() > roundWinner.getPlayedCard()) {
+            if (players[i]->getPlayedCard()->getRank() > roundWinner.getPlayedCard()->getRank()) {
             roundWinner = *players[i];
             roundWinnerIndex = i;
             }
         }
         return *players[roundWinnerIndex];
-}
+}*/
+    Player& Game::determineRoundWinner() {
+        Player* roundWinner = players[0];  // Initialize with the first player
+        int highestRank = roundWinner->getPlayedCard()->getRank();  // Initialize with the first player's card rank
+
+        for (int i = 1; i < players.size(); ++i) {
+            int currentRank = players[i]->getPlayedCard()->getRank();
+
+            //std::cout << players[i]->getName() << " heeft deze kaart in functie determine " << players[i]->getPlayedCard()->toString() << std::endl;
+
+            if (currentRank > highestRank) {
+            roundWinner = players[i];  // Update the roundWinner pointer
+            highestRank = currentRank;  // Update the highestRank
+            }
+        }
+
+        return *roundWinner;  // Dereference to return the actual winner
+    }
 
 void Game::displayScoreboard() {
         std::cout << "--------------------------------------------------Scoreboard:------------------------------------------------------------" << std::endl;
-        for ( Player* player : players) {
+        for (Player* player : players) {
             std::cout << player->getName() << ": " << player->getRoundsWon() << " won rounds" << std::endl;
         }
         std::cout << "-------------------" << std::endl;

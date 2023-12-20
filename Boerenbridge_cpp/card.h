@@ -11,8 +11,8 @@ public:
     enum Suit { HEARTS, DIAMONDS, CLUBS, SPADES };
     enum Rank { ACE = 1, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING };
 
-    Card(Suit suit, Rank rank);
-    ~Card()												{}
+    Card(Suit suit, Rank rank); // parameterized constructor
+    ~Card(){}	//destructor											{}
     bool operator < ( const Card & other ) const		{ return( rank < other.rank ); }
     bool operator < ( const Card * const other ) const	{ return( rank < other->rank ); }
     bool operator <= ( const Card & other ) const		{ return( rank <= other.rank ); }
@@ -30,7 +30,7 @@ public:
     Rank getRank() const;
 
     // Functie om de kaart te tonen (bijv. "HEARTS ACE")
-    std::string toString() const;
+    std::string toString() const; // usefull string class usage
 
 private:
     Suit suit;

@@ -2,7 +2,7 @@
 
 #include "Player.h"
 
-Player::Player(std::string name) : name(name), roundsToWin(0), roundsWon(0) {}
+Player::Player(std::string name) : name(name), roundsToWin(0), roundsWon(0) {} // member initialization
 
 void Player::addCardToHand(const Card& card) {
     hand.push_back(card);
@@ -12,9 +12,9 @@ const std::string& Player::getName() const {
     return name;
 }
 
-void Player::setName(std::string newName) {
-    name = newName;
-}
+//void Player::setName(std::string newName) {
+//name = newName;
+//}
 
 int Player::getRoundsWon() const {
     return roundsWon;
@@ -35,5 +35,5 @@ const Card* Player::getPlayedCard()   {
 
 // Setter function to set the played card
 void Player::setPlayedCard(const Card* card) {
-    playedCard = card;
+    playedCard = new Card(*card);
 }
