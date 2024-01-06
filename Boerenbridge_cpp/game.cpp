@@ -25,7 +25,7 @@ void Game::createPlayers() { // object composition, player en card worden gebrui
         std::cerr << "Error: Invalid input. Please enter an number." << std::endl;
     }}
 
-    while(amountOfHumanPlayers+amountOfComputerPlayers<=2 || amountOfComputerPlayers >=5 || amountOfComputerPlayers <=0){
+    while(amountOfHumanPlayers+amountOfComputerPlayers>=7 || amountOfComputerPlayers >=5 || amountOfComputerPlayers <=0){
     std::cout << "Enter the amount of AI players you want to play with: ";
     std::cin >> amountOfComputerPlayers;
 
