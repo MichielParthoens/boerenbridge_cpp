@@ -9,7 +9,9 @@ class Player {
     friend class Game;
 public:
     Player(std::string name);                    // parameterized Constructor
-    virtual ~Player(){}                         // destructor
+    ~Player() {// destructor
+        delete playedCard;  // Geheugen vrijgeven dat dynamisch is toegewezen aan playedCard
+    }
     virtual void makeMove() = 0;                // Pure virtual function
     void addCardToHand(const Card& card);
     const std::string& getName() const;         // useful getters and setters for member variables
