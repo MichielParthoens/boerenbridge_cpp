@@ -88,7 +88,7 @@ void Game::startGame() {
         std::cout << player->getName() << ", how many rounds do you want to win? ";
             std::cin >> roundsToWin;
         player->setRoundsToWin(roundsToWin);
-            totalRounds += roundsToWin;
+            totalRounds = 8;
         }
 
         // Start the rounds
