@@ -2,25 +2,17 @@
 
 To build this C++ project from scratch on a clean PC, you'll need to follow these steps:
 
-Setup C++ Development Environment:
+- Download cmake:
+U can download cmake by entering the following command in cmd: winget install kitware.cmake
+- Download MinGW:
+https://www.mingw-w64.org/downloads/
+make sure to add the bin folder from MinGW to system path variables. Otherwise the commands WON'T work.
 
-Install a C++ compiler like GCC, Clang, or Microsoft Visual C++ Compiler.
-Set up an Integrated Development Environment (IDE) or a text editor like Visual Studio Code, CLion, or Code::Blocks.
-Create Project Directory:
+-Open a terminal and navigate to the directory containing all the cpp and header files.
+-Make a folder where we will build the project.
+-Navigate to that folder in your terminal.
+-Enter this command: cmake -G "MinGW Makefiles" ..
+-You should now see make files appear in the folder.
+-Type the command make, this will generate a .exe file
 
-Create a new directory for your project.
-download the project from github and copy the header and cpp files to your directory
-
-Open a terminal or command prompt.
-Navigate to your project directory.
-Compile your C++ files using the chosen compiler. For example, using GCC:
-
-g++ -std=c++11 src/*.cpp -o mygame
-
-Here, -std=c++11 specifies the C++ version (you can change it based on your requirements), src/*.cpp indicates all .cpp files in the src directory, and -o mygame specifies the output executable name.
-Run the Executable:
-
-After successful compilation, you'll get an executable file (e.g., mygame).
-Run the executable:
-
-./mygame
+*if you have problems with the "make" command (sometimes the installation of MinGW doesn't include make") follow the steps in this link: https://leangaurav.medium.com/how-to-setup-install-gnu-make-on-windows-324480f1da69
