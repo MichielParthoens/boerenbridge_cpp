@@ -1,7 +1,7 @@
 // ComputerPlayer.cpp
 
 #include "computerplayer.h"
-
+using namespace GameNamespace;
 void ComputerPlayer::makeMove() {
     if (hand.empty()) {
         std::cout << getName() << " has no cards to play." << std::endl;
@@ -12,3 +12,4 @@ void ComputerPlayer::makeMove() {
     Player::setPlayedCard(selectedCard);
     hand.erase(hand.begin() + 1);                                         // Remove the played card from the player's hand
 }
+

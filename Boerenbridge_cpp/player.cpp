@@ -1,9 +1,8 @@
 // Player.cpp
 
 #include "Player.h"
-
+using namespace GameNamespace;
 Player::Player(std::string name) : name(name), roundsToWin(0), roundsWon(0) {} // member initialization
-
 void Player::addCardToHand(const Card& card) {
     hand.push_back(card);
 }

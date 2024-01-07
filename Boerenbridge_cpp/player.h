@@ -4,7 +4,7 @@
 
 #include "Card.h"
 #include <vector>
-
+namespace GameNamespace {
 class Player {
     friend class Game;
 public:
@@ -30,5 +30,5 @@ private:
     int roundsWon;
     const Card* playedCard = nullptr;           // member for the played card + usefull nullptr,This can be beneficial for checking conditions later in the code to determine if a card has been played by the player.
 };
-
+}
 #endif // PLAYER_H

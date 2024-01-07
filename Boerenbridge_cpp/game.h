@@ -6,7 +6,7 @@
 #include <vector>
 #include "Card.h"
 #include "Player.h"
-
+namespace GameNamespace {
 class Game {
 public:
     Game(); // Constructor
@@ -28,6 +28,6 @@ private:
     void createDeck();
     void dealCards();
 };
-
+}
 
 #endif // GAME_H

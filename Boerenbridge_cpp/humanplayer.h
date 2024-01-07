@@ -4,7 +4,7 @@
 #define HUMAN_PLAYER_H
 
 #include "Player.h"
-
+namespace GameNamespace {
 class HumanPlayer : public Player {
 public:
     HumanPlayer(std::string name) : Player(name){} // constructor forwarding, forwarding to the constructor from the base class player
@@ -13,6 +13,6 @@ public:
 protected:
 
 };
-
+}
 #endif // HUMAN_PLAYER_H
 

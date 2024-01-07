@@ -1,7 +1,7 @@
 // Card.cpp
 
 #include "card.h"
-
+using namespace GameNamespace;
 Card::Card(Suit suit, Rank rank) : suit(suit), rank(rank) {}
 
 Card::Suit Card::getSuit() const {
@@ -50,3 +50,4 @@ std::string Card::toString() const {//cases voor de string te returnen
 
     return suitStr + " " + rankStr;
 }
+

@@ -1,7 +1,7 @@
 // HumanPlayer.cpp
 
 #include "humanplayer.h"
-
+using namespace GameNamespace;
 void HumanPlayer::makeMove() {
     if (hand.empty()) {
         std::cout << getName() << " has no cards to play." << std::endl;
@@ -20,3 +20,4 @@ void HumanPlayer::makeMove() {
     // Remove the played card from the player's hand
     hand.erase(hand.begin() + randomIndex);
 }
+

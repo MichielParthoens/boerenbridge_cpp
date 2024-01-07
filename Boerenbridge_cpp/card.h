@@ -5,7 +5,7 @@
 
 #include <iostream>
 #include <string>
-
+namespace GameNamespace {
 class Card {
 public:
     enum Suit { HEARTS, DIAMONDS, CLUBS, SPADES };
@@ -36,5 +36,5 @@ private:
     Suit suit;
     Rank rank;
 };
-
+}
 #endif // CARD_H

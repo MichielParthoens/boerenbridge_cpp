@@ -4,7 +4,7 @@
 #define COMPUTER_PLAYER_H
 
 #include "Player.h"
-
+namespace GameNamespace {
 class ComputerPlayer : public Player {
 public:
     ComputerPlayer(std::string name) : Player(name){} //constructor forwarding
@@ -13,5 +13,5 @@ public:
 protected:
 
 };
-
+}
 #endif // COMPUTER_PLAYER_H

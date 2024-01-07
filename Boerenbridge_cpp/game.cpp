@@ -4,7 +4,7 @@
 #include "game.h"
 #include <algorithm>
 #include <iostream>
-
+using namespace GameNamespace;
 Game::Game() : currentPlayerIndex(0), totalRounds(0) {
     createPlayers();
 }
