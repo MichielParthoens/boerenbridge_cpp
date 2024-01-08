@@ -2,6 +2,7 @@
 #include "humanplayer.h"
 #include "computerplayer.h"
 #include "game.h"
+#include "card.h"
 #include <algorithm>
 #include <iostream>
 using namespace GameNamespace;
@@ -114,20 +115,16 @@ void Game::startGame() {
         displayScoreboard();
     }
 
-
     Player& Game::determineRoundWinner() {
         Player* roundWinner = players[0];  // Initialize with the first player
-        int highestRank = roundWinner->getPlayedCard()->getRank();  // Initialize with the first player's card rank
-
         for (int i = 1; i < players.size(); ++i) {
-            int currentRank = players[i]->getPlayedCard()->getRank();
-            if (currentRank > highestRank) {
+            if (GameNamespace::compareCards( *roundWinner->getPlayedCard(), *players[i]->getPlayedCard())) {
             roundWinner = players[i];  // Update the roundWinner pointer
-            highestRank = currentRank;  // Update the highestRank
             }
         }
         return *roundWinner;  // Dereference to return the actual winner
     }
+
 
 void Game::displayScoreboard() {
         std::cout <<" "<<std::endl;

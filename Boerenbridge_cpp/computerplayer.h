@@ -7,6 +7,7 @@
 namespace GameNamespace {
 class ComputerPlayer : public Player {
 public:
+    ComputerPlayer() : Player("bot") {} // default constructor
     ComputerPlayer(std::string name) : Player(name){} //constructor forwarding
     void makeMove() override; //override voor polymorphistische functie makemove
 

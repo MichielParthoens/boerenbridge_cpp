@@ -6,9 +6,10 @@
 #include <vector>
 namespace GameNamespace {
 class Player {
-    friend class Game;
+    // friend class Game;
 public:
     Player(std::string name);                    // parameterized Constructor
+    Player(const Player& otherPlayer): name(otherPlayer.name), roundsToWin(otherPlayer.roundsToWin),roundsWon(otherPlayer.roundsWon), playedCard(otherPlayer.playedCard)  {} // copy constructor
     ~Player() {// destructor
         delete playedCard;  // Geheugen vrijgeven dat dynamisch is toegewezen aan playedCard
     }

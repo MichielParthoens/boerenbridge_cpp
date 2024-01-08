@@ -4,11 +4,11 @@
 using namespace GameNamespace;
 Player::Player(std::string name) : name(name), roundsToWin(0), roundsWon(0) {} // member initialization
 void Player::addCardToHand(const Card& card) {
-    hand.push_back(card);
+    this->hand.push_back(card);
 }
 
 const std::string& Player::getName() const {
-    return name;
+    return this->name;
 }
 
 //void Player::setName(std::string newName) {
@@ -16,23 +16,23 @@ const std::string& Player::getName() const {
 //}
 
 int Player::getRoundsWon() const {
-    return roundsWon;
+    return this->roundsWon;
 }
 
 void Player::setRoundsToWin(int rounds) {
-    roundsToWin = rounds;
+    this->roundsToWin = rounds;
 }
 
 void Player::incrementRoundsWon() {
-    roundsWon++;
+    this->roundsWon++;
 }
 
 // Getter function to retrieve the played card
 const Card* Player::getPlayedCard()   {
-    return playedCard;
+    return this->playedCard;
 }
 
 // Setter function to set the played card
 void Player::setPlayedCard(const Card* card) {
-    playedCard = new Card(*card);
+    this->playedCard = new Card(*card);
 }

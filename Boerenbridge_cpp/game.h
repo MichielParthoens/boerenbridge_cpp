@@ -4,12 +4,12 @@
 #define GAME_H
 
 #include <vector>
-#include "Card.h"
+#include "card.h"
 #include "Player.h"
 namespace GameNamespace {
 class Game {
 public:
-    Game(); // Constructor
+    Game(); // default Constructor
     void runGame();
     void startGame();
 
@@ -19,8 +19,8 @@ protected:
 private:
     std::vector<Player*> players; // usefull container class to store pointers to players
     std::vector<Card> deck;
-    int currentPlayerIndex;
-    int totalRounds = 8;
+    unsigned char currentPlayerIndex; // 0 .. 255
+    unsigned char totalRounds = 8; // 0 .. 255
     Player& determineRoundWinner();
 
     void displayScoreboard();

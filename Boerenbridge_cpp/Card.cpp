@@ -50,4 +50,7 @@ std::string Card::toString() const {//cases voor de string te returnen
 
     return suitStr + " " + rankStr;
 }
+bool GameNamespace::compareCards(const Card& card1, const Card& card2) { // const reference to card1 and card2 because we don't need a copy and we don't change the object (faster and less memory usage because no copying)
+    return card1.rank < card2.rank;
+}
 
