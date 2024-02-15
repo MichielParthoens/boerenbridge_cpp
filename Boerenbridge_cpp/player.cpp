@@ -36,3 +36,9 @@ const Card* Player::getPlayedCard()   {
 void Player::setPlayedCard(const Card* card) {
     this->playedCard = new Card(*card);
 }
+
+void Player::printHand(){
+    for(int amountofcards = hand.size()-1; amountofcards >=0; amountofcards--){
+        std::cout << hand[amountofcards].toString() << std::endl;
+    }
+}

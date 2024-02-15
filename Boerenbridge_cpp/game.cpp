@@ -99,6 +99,7 @@ void Game::startGame() {
 
             // Each player makes a move (plays a card)
             for (Player* player : players) {
+
             player->makeMove();
             }
 
@@ -136,6 +137,10 @@ void Game::displayScoreboard() {
         std::cout <<" "<<std::endl;
         std::cout << "-------------------------------------------------------------------------------------------------------------------------" << std::endl;
         std::cout <<" "<<std::endl;
+}
+
+void Game::shuffleDeck(){
+
 }
 
 

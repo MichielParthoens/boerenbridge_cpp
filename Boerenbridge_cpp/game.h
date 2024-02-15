@@ -27,6 +27,7 @@ private:
     void createPlayers();
     void createDeck();
     void dealCards();
+    void shuffleDeck();
 };
 }
 

@@ -21,6 +21,7 @@ public:
     void incrementRoundsWon();                  // usefull member functions
     const Card* getPlayedCard();
     void setPlayedCard(const Card* card);
+    void printHand();
 
 protected:
     std::vector<Card> hand;
