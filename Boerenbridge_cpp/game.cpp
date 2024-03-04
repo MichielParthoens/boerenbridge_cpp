@@ -159,6 +159,7 @@ void Game::shuffleDeck2(){
         std::vector<Card> underCut;
         std::vector<Card> middleCut;
         std::vector<Card> upperCut;
+        std::vector<Card> tempDeck;
         int underIndex = 5;
         int middleIndex = 5;
         int upperIndex = 5;

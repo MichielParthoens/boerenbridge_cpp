@@ -1,0 +1,16 @@
+# ninja log v5
+49	4209	7296942049062376	CMakeFiles/Boerenbridge_cpp.dir/computerplayer.cpp.obj	b32b2c73ba68b9ed
+1	4253	7296942049062376	CMakeFiles/Boerenbridge_cpp.dir/main.cpp.obj	a888bfd1e1292410
+19	4279	7296942049808249	CMakeFiles/Boerenbridge_cpp.dir/Card.cpp.obj	77f5da7f17ea4e7f
+32	4295	7296942050083132	CMakeFiles/Boerenbridge_cpp.dir/humanplayer.cpp.obj	f769de4afac133f8
+9	4299	7296942049967688	CMakeFiles/Boerenbridge_cpp.dir/player.cpp.obj	66d156c27cca9a33
+69	4304	7296942050227845	CMakeFiles/Boerenbridge_cpp.dir/game.cpp.obj	7cfaf72dc7e3bca
+4306	5838	7296942065510183	Boerenbridge_cpp.exe	f6a2c3c56d9dc8da
+2	4695	7296954131284115	CMakeFiles/Boerenbridge_cpp.dir/main.cpp.obj	a888bfd1e1292410
+57	4713	7296954131938842	CMakeFiles/Boerenbridge_cpp.dir/computerplayer.cpp.obj	b32b2c73ba68b9ed
+35	4728	7296954131648004	CMakeFiles/Boerenbridge_cpp.dir/humanplayer.cpp.obj	f769de4afac133f8
+87	4740	7296954132031553	CMakeFiles/Boerenbridge_cpp.dir/game.cpp.obj	7cfaf72dc7e3bca
+17	4744	7296954132269410	CMakeFiles/Boerenbridge_cpp.dir/player.cpp.obj	66d156c27cca9a33
+4745	5791	7296954141305407	Boerenbridge_cpp.exe	f6a2c3c56d9dc8da
+2	2230	7296954992461799	CMakeFiles/Boerenbridge_cpp.dir/game.cpp.obj	7cfaf72dc7e3bca
+2233	2912	7296954997705851	Boerenbridge_cpp.exe	f6a2c3c56d9dc8da
