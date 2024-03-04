@@ -28,6 +28,7 @@ private:
     void createDeck();
     void dealCards();
     void shuffleDeck();
+    void shuffleDeck2();
 };
 }
 

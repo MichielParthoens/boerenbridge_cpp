@@ -140,7 +140,34 @@ void Game::displayScoreboard() {
 }
 
 void Game::shuffleDeck(){
+        std::vector<Card> deck1;
+        std::vector<Card> deck2;
+        for(int i=3;i>=0; i--){
+            int randomIndex = rand() % deck.size();
+            for (int y = randomIndex; y>=0; y--){
+            deck1[y] = deck[y];
+            deck1.push_back(deck[y]);
+            }
+            for(int z = randomIndex+1; z <= deck.size(); z++){
+            deck2[z] = deck[z];
+            }
 
+        }}
+
+void Game::shuffleDeck2(){
+        std::vector<Card> newDeck;
+        std::vector<Card> underCut;
+        std::vector<Card> middleCut;
+        std::vector<Card> upperCut;
+        int underIndex = 5;
+        int middleIndex = 5;
+        int upperIndex = 5;
+        while(middleIndex >=2){
+        underIndex = rand() % deck.size();
+        middleIndex = rand() % (deck.size()-underIndex);
+        upperIndex = (deck.size()-(underIndex + middleIndex));
+
+
+
+        }
 }
-
-
